@@ -1,0 +1,9 @@
+# Organizer kit: pristine clone + 58MB catalog, rebuilt by the README setup steps. Never tracked.
+kit/
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
