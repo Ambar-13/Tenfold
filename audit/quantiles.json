@@ -1,0 +1,330 @@
+{
+  "generated": "2026-08-28T23:01:41",
+  "artifact": "empirically calibrated per-turn quantiles of the target rank (empirical uncertainty audit, calibration half)",
+  "population": "DEV half of stage0/split_manifest.json, NON-OVERRIDE sessions only (buying + browsing + boundary; intent_override excluded)",
+  "score": "rank of the ground-truth ASIN in the frozen agent's full post-rerank internal ordering at each turn under the hold-all sweep; +inf if outside the pool; identical to the slate rank whenever <= 10",
+  "rule": "q_hat_t = the ceil((n_b+1)*0.9)-th smallest score in exact turn bucket t (one score per session per bucket); if that index exceeds n_b, q_hat_t = inf",
+  "nominal_level": 0.9,
+  "frozen_env": {
+    "TENFOLD_RETRIEVAL": "v2",
+    "TENFOLD_OVERRIDE": "selective",
+    "TENFOLD_HOLD": "conf",
+    "TENFOLD_ASK": "other_first",
+    "TENFOLD_PARSE": "robust",
+    "TENFOLD_COVERAGE": "idf"
+  },
+  "assumption_note": "Within-family session exchangeability is an assumption about the fixed stratified public set (a quota sample, not an i.i.d. draw), not a theorem. These are empirically calibrated numbers for that set; in-family evaluation numbers are empirically calibrated, out-of-family numbers are empirical transfer tests. No claim is made for any other distribution.",
+  "committed_before_any_evaluation_work": true,
+  "quantiles": {
+    "official": {
+      "1": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 319,
+        "n_outside_pool": 5
+      },
+      "2": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 30,
+        "n_outside_pool": 1
+      },
+      "3": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 5,
+        "n_outside_pool": 0
+      },
+      "4": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 4,
+        "n_outside_pool": 0
+      },
+      "5": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 4,
+        "n_outside_pool": 0
+      },
+      "6": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 4,
+        "n_outside_pool": 0
+      },
+      "7": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 4,
+        "n_outside_pool": 0
+      },
+      "8": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 4,
+        "n_outside_pool": 0
+      },
+      "9": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 4,
+        "n_outside_pool": 0
+      },
+      "10": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 4,
+        "n_outside_pool": 0
+      }
+    },
+    "h1": {
+      "1": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": "inf",
+        "n_outside_pool": 15
+      },
+      "2": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 258,
+        "n_outside_pool": 4
+      },
+      "3": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 133,
+        "n_outside_pool": 0
+      },
+      "4": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 99,
+        "n_outside_pool": 0
+      },
+      "5": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 99,
+        "n_outside_pool": 0
+      },
+      "6": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 99,
+        "n_outside_pool": 0
+      },
+      "7": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 99,
+        "n_outside_pool": 0
+      },
+      "8": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 99,
+        "n_outside_pool": 0
+      },
+      "9": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 141,
+        "n_outside_pool": 0
+      },
+      "10": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 141,
+        "n_outside_pool": 0
+      }
+    },
+    "h2": {
+      "1": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": "inf",
+        "n_outside_pool": 19
+      },
+      "2": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": "inf",
+        "n_outside_pool": 9
+      },
+      "3": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 375,
+        "n_outside_pool": 5
+      },
+      "4": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 167,
+        "n_outside_pool": 3
+      },
+      "5": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 149,
+        "n_outside_pool": 1
+      },
+      "6": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 167,
+        "n_outside_pool": 1
+      },
+      "7": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 90,
+        "n_outside_pool": 1
+      },
+      "8": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 90,
+        "n_outside_pool": 0
+      },
+      "9": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 89,
+        "n_outside_pool": 0
+      },
+      "10": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 95,
+        "n_outside_pool": 0
+      }
+    },
+    "h3": {
+      "1": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": "inf",
+        "n_outside_pool": 19
+      },
+      "2": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": "inf",
+        "n_outside_pool": 9
+      },
+      "3": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": "inf",
+        "n_outside_pool": 10
+      },
+      "4": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 426,
+        "n_outside_pool": 7
+      },
+      "5": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 385,
+        "n_outside_pool": 6
+      },
+      "6": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 385,
+        "n_outside_pool": 6
+      },
+      "7": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 364,
+        "n_outside_pool": 6
+      },
+      "8": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 315,
+        "n_outside_pool": 4
+      },
+      "9": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 315,
+        "n_outside_pool": 4
+      },
+      "10": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 374,
+        "n_outside_pool": 4
+      }
+    },
+    "holdout": {
+      "1": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": "inf",
+        "n_outside_pool": 18
+      },
+      "2": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": "inf",
+        "n_outside_pool": 8
+      },
+      "3": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 258,
+        "n_outside_pool": 2
+      },
+      "4": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 245,
+        "n_outside_pool": 2
+      },
+      "5": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 250,
+        "n_outside_pool": 2
+      },
+      "6": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 252,
+        "n_outside_pool": 3
+      },
+      "7": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 346,
+        "n_outside_pool": 3
+      },
+      "8": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 314,
+        "n_outside_pool": 4
+      },
+      "9": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 372,
+        "n_outside_pool": 6
+      },
+      "10": {
+        "n_b": 85,
+        "order_statistic_index": 78,
+        "q_hat": 401,
+        "n_outside_pool": 6
+      }
+    }
+  }
+}
