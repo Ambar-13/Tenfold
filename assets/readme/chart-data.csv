@@ -1,0 +1,13 @@
+source,sessions,technical_score,hit_rate_at_10,mrr,mean_turns
+a-override-selective.json,200,0.777657,0.865,0.69619,4.185
+b-v2-selective-hold2.json,200,0.892843,0.97,0.850476,3.365
+c-conf.json,200,0.899843,0.97,0.850476,3.015
+d-headline-h1.json,200,0.449313,0.53,0.338042,6.855
+d-headline-h2.json,200,0.403764,0.485,0.305546,7.52
+d-headline-h3.json,200,0.306111,0.365,0.228704,8.25
+d-kitstarter-official.json,200,0.10671,0.125,0.068034,9.81
+e-fixed-h1.json,200,0.724281,0.825,0.611937,4.59
+e-fixed-h2.json,200,0.694369,0.815,0.56723,5.165
+e-fixed-h3.json,200,0.581891,0.68,0.47297,6.0
+e-fixed-holdout.json,200,0.672183,0.75,0.596942,5.095
+e-fixed-official.json,200,0.902435,0.975,0.845782,2.94
